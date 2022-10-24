@@ -1,0 +1,131 @@
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 70vh;
+  background: url("/assets/image.jpg") center center/cover;
+  color: white;
+}
+header nav {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav h1 {
+  font-size: 60px;
+  padding-bottom: 30px;
+}
+header nav ul {
+  font-size: 45px;
+  width: 1200px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header nav ul a {
+  position: relative;
+  color: white;
+  transition: -webkit-text-decoration 2s;
+  transition: text-decoration 2s;
+  transition: text-decoration 2s, -webkit-text-decoration 2s;
+}
+header nav ul a:after {
+  content: "";
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+header nav ul a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+@media screen and (max-width: 1100px) {
+  header nav ul {
+    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul a {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+    width: 600px;
+  }
+  header nav ul a:hover {
+    background: #fff;
+    color: black;
+    text-decoration: none;
+  }
+  header nav ul a::after {
+    display: none;
+  }
+}
+
+section {
+  box-sizing: border-box;
+  height: 70vh;
+  width: 100vw;
+  padding: 30px;
+  background: #2E5894;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 1600px) {
+  section #img3art:first-child img {
+    border: 2px solid red;
+  }
+}
+
+.textArt h2 {
+  font-size: 35px;
+}
+
+#img3art {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  justify-content: space-between;
+}
+
+.linkImg {
+  position: relative;
+}
+.linkImg img {
+  width: 500px;
+  height: 300px;
+}
+.linkImg .linkI3 {
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}/*# sourceMappingURL=stijl.css.map */

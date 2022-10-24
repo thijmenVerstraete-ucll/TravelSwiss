@@ -1,0 +1,81 @@
+@use '../sass-utils/variable' as v;
+
+header {
+    width: 100vw;
+    height: 620px;
+    background: url('/assets/header/matterhorn.jpg') center center/cover;
+
+
+    nav {
+        color: #fff;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h1 {
+            margin: 0 auto;
+            font-size: 50px;
+        }
+
+        ul {
+            padding: 0;
+            width: 100vw;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            
+            
+            li {
+                a {
+                    font-size: 40px;
+                    font-weight: bold;
+                    display: block;
+                    color: #fff;
+                    text-decoration: none;
+                    padding: 20px ;
+                }
+
+                a:hover {
+                    background: white;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    @media screen and(min-width: v.$computer-width) {
+        height: 200px;
+        flex-direction: column;
+        nav {
+            height: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            ul {
+                padding: 0;
+                width: 1000px;
+                flex-direction: row;
+                justify-content: space-around;
+                
+
+                li {
+                    a {
+
+                        &#currentPage {
+                            background: white;
+                            color: black;
+                        }
+                    }
+                    a:hover {
+                        background: none;
+                        color: white;
+                    }
+
+                }
+            }
+        }
+    }
+}

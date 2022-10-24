@@ -1,0 +1,103 @@
+section {
+  background-color: #2773dd;
+  color: #fff;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+section article.artDescription h2 {
+  font-size: 30px;
+}
+section article.artDescription p {
+  font-size: 20px;
+}
+section article.threeImg {
+  display: flex;
+  justify-content: space-around;
+}
+section article.threeImg .coverImg {
+  position: relative;
+}
+section article.threeImg .coverImg img {
+  width: 400px;
+}
+section article.threeImg .coverImg p {
+  font-size: 50px;
+  color: #fff;
+  margin: 0;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+}
+
+header {
+  width: 100vw;
+  height: 620px;
+  background: url("/assets/header/matterhorn.jpg") center center/cover;
+}
+header nav {
+  color: #fff;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+header nav h1 {
+  margin: 0 auto;
+  font-size: 50px;
+}
+header nav ul {
+  padding: 0;
+  width: 100vw;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+header nav ul li a {
+  font-size: 40px;
+  font-weight: bold;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+}
+header nav ul li a:hover {
+  background: white;
+  color: black;
+}
+@media screen and (min-width: 1300px) {
+  header {
+    height: 200px;
+    flex-direction: column;
+  }
+  header nav {
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  header nav ul {
+    padding: 0;
+    width: 1000px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  header nav ul li a#currentPage {
+    background: white;
+    color: black;
+  }
+  header nav ul li a:hover {
+    background: none;
+    color: white;
+  }
+}/*# sourceMappingURL=stijl.css.map */

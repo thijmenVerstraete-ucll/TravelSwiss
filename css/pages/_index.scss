@@ -1,0 +1,43 @@
+@use '../sass-utils/variable' as v;
+
+section {
+    background-color: v.$primCol;
+    color: v.$primTextcol;
+    padding: 20px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    article{
+        &.artDescription {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+        &.threeImg {
+            display: flex;
+            justify-content: space-around;
+
+            .coverImg {
+                position: relative;
+                img {
+                    width: 400px;
+                }
+                p {
+                    font-size: 50px;
+                    color: v.$primTextcol;
+                    margin: 0;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
