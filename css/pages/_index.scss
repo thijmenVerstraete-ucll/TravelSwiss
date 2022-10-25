@@ -22,12 +22,12 @@ section {
             display: flex;
             justify-content: space-around;
 
-            .coverImg {
+            figure {
                 position: relative;
                 img {
                     width: 400px;
                 }
-                p {
+                figcaption {
                     font-size: 50px;
                     color: v.$primTextcol;
                     margin: 0;

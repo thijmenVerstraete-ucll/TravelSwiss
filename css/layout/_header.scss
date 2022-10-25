@@ -3,7 +3,7 @@
 header {
     width: 100vw;
     height: 620px;
-    background: url('/assets/header/matterhorn.jpg') center center/cover;
+    background: url('../assets/header/matterhorn.jpg') center center/cover;
 
 
     nav {
@@ -72,6 +72,14 @@ header {
                     a:hover {
                         background: none;
                         color: white;
+                    }
+
+                    a::after {
+                        bottom: 0;
+                        left: 0;
+                    }
+                    a:hover::after {
+                        
                     }
 
                 }

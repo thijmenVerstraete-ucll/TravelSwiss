@@ -1,5 +1,5 @@
 section {
-  background-color: #2773dd;
+  background-color: #4689e6;
   color: #fff;
   padding: 20px;
   height: 500px;
@@ -17,13 +17,13 @@ section article.threeImg {
   display: flex;
   justify-content: space-around;
 }
-section article.threeImg .coverImg {
+section article.threeImg figure {
   position: relative;
 }
-section article.threeImg .coverImg img {
+section article.threeImg figure img {
   width: 400px;
 }
-section article.threeImg .coverImg p {
+section article.threeImg figure figcaption {
   font-size: 50px;
   color: #fff;
   margin: 0;
@@ -34,6 +34,14 @@ section article.threeImg .coverImg p {
   transform: translate(-50%, -50%);
 }
 
+form {
+  width: 70%;
+  margin: auto;
+}
+form textarea {
+  max-width: 100%;
+}
+
 body {
   font-family: sans-serif;
   padding: 0;
@@ -42,7 +50,7 @@ body {
 header {
   width: 100vw;
   height: 620px;
-  background: url("/assets/header/matterhorn.jpg") center center/cover;
+  background: url("../assets/header/matterhorn.jpg") center center/cover;
 }
 header nav {
   color: #fff;
@@ -99,5 +107,9 @@ header nav ul li a:hover {
   header nav ul li a:hover {
     background: none;
     color: white;
+  }
+  header nav ul li a::after {
+    bottom: 0;
+    left: 0;
   }
 }/*# sourceMappingURL=stijl.css.map */
