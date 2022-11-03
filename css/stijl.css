@@ -1,11 +1,26 @@
+section:nth-of-type(even) {
+  background-color: white;
+  color: black;
+}
+
 section {
   background-color: #4689e6;
   color: #fff;
-  padding: 20px;
-  height: 500px;
+  padding: 20px 50px;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-around;
+}
+@media screen and (max-width: 800px) {
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+section article {
+  max-width: 1600px;
 }
 section article.artDescription h2 {
   font-size: 30px;
@@ -14,14 +29,22 @@ section article.artDescription p {
   font-size: 20px;
 }
 section article.threeImg {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 section article.threeImg figure {
+  margin: 0;
   position: relative;
 }
 section article.threeImg figure img {
-  width: 400px;
+  width: 100%;
+  height: 100%;
+  max-height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 section article.threeImg figure figcaption {
   font-size: 50px;
@@ -32,6 +55,48 @@ section article.threeImg figure figcaption {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+section article.gallery {
+  width: 100%;
+  height: 70vh;
+  padding: 40px 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: center;
+}
+section article.gallery img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section article.gallery #g1 {
+  grid-area: 1/1/4/1;
+}
+section article.gallery #g2 {
+  grid-area: 1/2/1/4;
+}
+section article.gallery #g3 {
+  grid-area: 2/2/4/2;
+}
+section article.gallery #g4 {
+  grid-area: 1/4/3/4;
+}
+section article.gallery #g5 {
+  grid-area: 3/3/3/5;
+}
+@media screen and (max-width: 1050px) {
+  section article.threeImg {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+  }
+  section article.threeImg figure img {
+    margin: 10px 0;
+    width: 90vw;
+  }
 }
 
 form {
