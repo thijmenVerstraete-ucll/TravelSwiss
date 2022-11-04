@@ -8,20 +8,14 @@ section:nth-of-type(even) {
 section {
     background-color: v.$primCol;
     color: v.$primTextcol;
-    padding: 20px 50px;
+    padding: 20px 200px;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 
-    @media screen and (max-width: v.$tablet-width){
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     article{
-        max-width: 1600px;
         &.artDescription {
             h2 {
                 font-size: 30px;
@@ -32,29 +26,31 @@ section {
         }
         &.threeImg {
             width: 100%;
-            display: grid;
+            display: flex;
             justify-content: space-between;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
 
-            figure {
-                margin: 0;
-                position: relative;
-                img {
-                    width: 100%;
-                    height: 100%;
-                    max-height: 270px;
-                    object-fit: cover;
-                }
-                figcaption {
-                    font-size: 50px;
-                    color: v.$primTextcol;
+            a {
+                width: 30%;
+                figure {
                     margin: 0;
-                    font-weight: bold;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
+                    position: relative;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        max-height: 270px;
+                        object-fit: cover;
+                        filter: brightness(50%);
+                    }
+                    figcaption {
+                        font-size: 50px;
+                        color: v.$primTextcol;
+                        margin: 0;
+                        font-weight: bold;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
                 }
             }
         }
@@ -68,16 +64,6 @@ section {
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(3,1fr);
             justify-content: center;
-
-            // div {
-            //     padding: 100px;
-            //     background: url('../assets/index/henrique-ferreira-6p-I-X-sPUY-unsplash.jpg') center center/cover;
-            //     background-color: #333;
-            //     color: red;
-            //     text-align: center;
-            //     font-weight: bold;
-            //     font-size: 40px;
-            // }
 
             img {
                 height: 100%;
@@ -106,16 +92,51 @@ section {
             }
         }
 
-        @media screen and(max-width: 1050px) {
+        // @media screen and(max-width: 1330px) {
+        //     &.threeImg {
+
+        //     }
+        // }
+
+
+        @media screen and(max-width: 1100px) {
             &.threeImg {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(3, 1fr);
+                flex-direction: column;
                 align-items: center;
-                figure img{
-                    margin: 10px 0;
+                a {
                     width: 90vw;
+                    img{
+                        margin: 10px 0;
+                        width: 100vw;
+                    }
+                }
+            }
+
+            &.gallery {
+                height: auto;
+                width: 100%;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 400px);
+                
+                img {
+                    grid-area: auto !important;
                 }
             }
         }
+
+        @media screen and (max-width: 800px) {
+            &.gallery {
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    @media screen and(max-width: 1500px) {
+        padding: 20px 100px !important;
     }
 }

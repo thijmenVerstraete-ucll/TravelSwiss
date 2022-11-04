@@ -13,15 +13,16 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        
 
         h1 {
-            margin: 0 auto;
+            margin: 0;
             font-size: 50px;
         }
 
         ul {
             padding: 0;
-            width: 100vw;
+            margin: 0;
             list-style: none;
             display: flex;
             flex-direction: column;
@@ -46,13 +47,18 @@ header {
     }
 
     @media screen and(min-width: v.$computer-width) {
+        box-sizing: border-box;
         height: 200px;
+        padding: 0 200px;
         flex-direction: column;
+        display: flex;
+        align-items: center;
         nav {
             height: 100%;
+            width: 100%;
             flex-direction: row;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
 
             ul {
                 padding: 0;

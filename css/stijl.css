@@ -6,21 +6,12 @@ section:nth-of-type(even) {
 section {
   background-color: #4689e6;
   color: #fff;
-  padding: 20px 50px;
+  padding: 20px 200px;
   min-height: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-@media screen and (max-width: 800px) {
-  section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-section article {
-  max-width: 1600px;
 }
 section article.artDescription h2 {
   font-size: 30px;
@@ -30,23 +21,25 @@ section article.artDescription p {
 }
 section article.threeImg {
   width: 100%;
-  display: grid;
+  display: flex;
   justify-content: space-between;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
 }
-section article.threeImg figure {
+section article.threeImg a {
+  width: 30%;
+}
+section article.threeImg a figure {
   margin: 0;
   position: relative;
-}
-section article.threeImg figure img {
   width: 100%;
-  height: 100%;
+}
+section article.threeImg a figure img {
+  width: 100%;
   max-height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: brightness(50%);
 }
-section article.threeImg figure figcaption {
+section article.threeImg a figure figcaption {
   font-size: 50px;
   color: #fff;
   margin: 0;
@@ -87,24 +80,52 @@ section article.gallery #g4 {
 section article.gallery #g5 {
   grid-area: 3/3/3/5;
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
   section article.threeImg {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    flex-direction: column;
     align-items: center;
   }
-  section article.threeImg figure img {
-    margin: 10px 0;
+  section article.threeImg a {
     width: 90vw;
+  }
+  section article.threeImg a img {
+    margin: 10px 0;
+    width: 100vw;
+  }
+  section article.gallery {
+    height: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 400px);
+  }
+  section article.gallery img {
+    grid-area: auto !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  section article.gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  section article.gallery img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  section {
+    padding: 20px 100px !important;
   }
 }
 
 form {
-  width: 70%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 form textarea {
   max-width: 100%;
+  width: 100%;
 }
 
 body {
@@ -126,12 +147,12 @@ header nav {
   justify-content: space-evenly;
 }
 header nav h1 {
-  margin: 0 auto;
+  margin: 0;
   font-size: 50px;
 }
 header nav ul {
   padding: 0;
-  width: 100vw;
+  margin: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -150,14 +171,19 @@ header nav ul li a:hover {
 }
 @media screen and (min-width: 1300px) {
   header {
+    box-sizing: border-box;
     height: 200px;
+    padding: 0 200px;
     flex-direction: column;
+    display: flex;
+    align-items: center;
   }
   header nav {
     height: 100%;
+    width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   header nav ul {
     padding: 0;
