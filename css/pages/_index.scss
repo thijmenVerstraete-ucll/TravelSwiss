@@ -16,16 +16,14 @@ section {
     justify-content: space-around;
 
     article{
+        width: 100%;
+        font-size: 20px;
         &.artDescription {
             h2 {
                 font-size: 30px;
             }
-            p {
-                font-size: 20px;
-            }
         }
         &.threeImg {
-            width: 100%;
             display: flex;
             justify-content: space-between;
 
@@ -56,7 +54,6 @@ section {
         }
 
         &.gallery {
-            width: 100%;
             height: 70vh;
             padding: 40px 0;
             display: grid;
@@ -91,12 +88,6 @@ section {
                 grid-area: 3 / 3 / 3 / 5;
             }
         }
-
-        // @media screen and(max-width: 1330px) {
-        //     &.threeImg {
-
-        //     }
-        // }
 
 
         @media screen and(max-width: 1100px) {
