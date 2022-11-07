@@ -2,6 +2,12 @@ section:nth-of-type(even) {
   background-color: white;
   color: black;
 }
+section:nth-of-type(even) .activity .activity_img {
+  grid-area: 1/3/3/4;
+}
+section:nth-of-type(even) .activity .activity_descr {
+  grid-column: 1/3;
+}
 
 section {
   background-color: #4689e6;
@@ -129,53 +135,49 @@ form textarea {
 
 article.activity {
   margin-top: 40px;
-  display: flex;
-  justify-content: space-between;
   height: 700px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 10px;
 }
-article.activity img {
-  width: 30%;
+article.activity .activity_img {
+  grid-area: 1/1/3/2;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-article.activity .activity_items {
+article.activity ul {
   padding: 0;
-  margin: 0;
   list-style-type: none;
-  width: 69%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-article.activity .activity_items ul {
+article.activity ul.activity_descr {
+  margin: 0;
+  grid-column: 2/5;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
   background-color: #324e77;
   color: white;
-  padding: 0;
-  list-style-type: none;
-}
-article.activity .activity_items ul.activity_descr {
-  padding: 10px;
-  box-sizing: border-box;
-  height: 340px;
   display: flex;
   flex-direction: row;
 }
-article.activity .activity_items ul.activity_descr > li {
+article.activity ul.activity_descr > li {
   width: 50%;
 }
-article.activity .activity_items ul.activity_descr .descr_items {
+article.activity ul.activity_descr .descr_items {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-article.activity .activity_items ul.activity_descr .descr_items h3 {
+article.activity ul.activity_descr .descr_items h3 {
   font-size: 30px;
   margin: 0;
 }
-article.activity .activity_items ul.activity_descr img {
+article.activity ul.activity_descr img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
