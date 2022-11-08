@@ -3,7 +3,7 @@
 article {
     &.activity {
         margin-top: 40px;
-        height: 700px;
+        // height: 700px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 300px);
@@ -20,8 +20,8 @@ article {
         ul{
             padding: 0;
             list-style-type: none;
-            
-            &.activity_descr {
+        } 
+            .activity_descr {
                 margin: 0;
                 grid-column: 2 / 5;
                 box-sizing: border-box;
@@ -55,9 +55,42 @@ article {
                     height: 100%;
                     object-fit: cover;
                 }
+        }
+
+        @media screen and(max-width: 1200px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 300px);
+
+            .activity_img {
+                grid-area: 1 / 1 / 1 / 4 !important;
             }
 
-            
+            .activity_descr {
+                grid-column: 1 / 4 !important;
+            }
+        }
+
+        @media screen and(max-width: 900px) {
+            grid-template-rows: repeat(5, 320px);
+
+            .activity_descr {
+                grid-row: span 2;
+
+                flex-direction: column;
+                align-items: space-between;
+                justify-content: space-between;
+
+                li {
+                    width: 100%;
+                }
+
+                .descr_items {
+                    height: 300px;
+                }
+                img {
+                    height: 300px;
+                }
         }
     }
+}
 }

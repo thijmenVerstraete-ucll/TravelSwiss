@@ -121,6 +121,11 @@ section article.gallery #g5 {
     padding: 20px 100px !important;
   }
 }
+@media screen and (max-width: 740px) {
+  section {
+    padding: 20px 30px !important;
+  }
+}
 
 form {
   margin: auto;
@@ -135,7 +140,6 @@ form textarea {
 
 article.activity {
   margin-top: 40px;
-  height: 700px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 300px);
@@ -152,7 +156,7 @@ article.activity ul {
   padding: 0;
   list-style-type: none;
 }
-article.activity ul.activity_descr {
+article.activity .activity_descr {
   margin: 0;
   grid-column: 2/5;
   box-sizing: border-box;
@@ -164,24 +168,56 @@ article.activity ul.activity_descr {
   display: flex;
   flex-direction: row;
 }
-article.activity ul.activity_descr > li {
+article.activity .activity_descr > li {
   width: 50%;
 }
-article.activity ul.activity_descr .descr_items {
+article.activity .activity_descr .descr_items {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-article.activity ul.activity_descr .descr_items h3 {
+article.activity .activity_descr .descr_items h3 {
   font-size: 30px;
   margin: 0;
 }
-article.activity ul.activity_descr img {
+article.activity .activity_descr img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 1200px) {
+  article.activity {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 300px);
+  }
+  article.activity .activity_img {
+    grid-area: 1/1/1/4 !important;
+  }
+  article.activity .activity_descr {
+    grid-column: 1/4 !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  article.activity {
+    grid-template-rows: repeat(5, 320px);
+  }
+  article.activity .activity_descr {
+    grid-row: span 2;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-between;
+  }
+  article.activity .activity_descr li {
+    width: 100%;
+  }
+  article.activity .activity_descr .descr_items {
+    height: 300px;
+  }
+  article.activity .activity_descr img {
+    height: 300px;
+  }
 }
 
 body {

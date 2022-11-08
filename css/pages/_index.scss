@@ -140,4 +140,8 @@ section {
     @media screen and(max-width: 1500px) {
         padding: 20px 100px !important;
     }
+
+    @media screen and(max-width: 740px) {
+        padding: 20px 30px !important;
+    }
 }
