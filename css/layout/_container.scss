@@ -1,4 +1,56 @@
+@use '../sass-utils/variable' as v;
+
 body {
     font-family: sans-serif;
     padding: 0;
+}
+
+section {
+    background-color: v.$primCol;
+    color: v.$primTextcol;
+    padding: 20px 200px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &:nth-of-type(even) {
+        background-color: v.$secondCol;
+        color: v.$secondTextCol;
+    
+        .activity {
+            .activity_img {
+                grid-area: 1 / 3 / 3 / 4;
+            }
+    
+            .activity_descr {
+                grid-column: 1 / 3;
+
+
+                background-color: v.$primCol;
+                color: v.$primTextcol;
+            }
+        }
+    }
+
+
+    @media screen and(max-width: 1500px) and (min-width: 740px){
+        padding: 20px 100px;
+    }
+
+    @media screen and(max-width: 740px) {
+        padding: 20px 30px;
+    }
+}
+
+article {
+    width: 100%;
+    font-size: 20px;
+
+    &.artDescription {
+        h2 {
+            font-size: 30px;
+        }
+    }
 }

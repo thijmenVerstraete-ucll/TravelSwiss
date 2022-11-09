@@ -1,0 +1,21 @@
+ToDo:
+
+2. CSS / html nakijken
+
+4. Activiteiten toevoegen
+
+5. snelheid testen
+
+6. kleuren contrast nakijken
+
+7. Tips pagina afwerken
+
+8. Contact page afwerken + nakijken
+
+9. footer maken
+
+10. website controleren met document vereisten
+
+11. verhoudingen van afbeeldingen aanpassen
+
+12. afbeeldingen juiste alt tag geven

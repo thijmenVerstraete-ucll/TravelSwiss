@@ -1,13 +1,15 @@
 @use '../sass-utils/variable' as v;
 
+
 form {
-
-    margin: auto;
-    
-
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+    .left, .right {
+        width: 50%;
+    }
 
     textarea {
         max-width: 100%;

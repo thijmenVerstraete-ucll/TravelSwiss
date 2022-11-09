@@ -20,35 +20,39 @@
         </nav>
     </header>
 
-    <section>
+    <section >
         <article class="artDescription">
             <h2>Contacteer ons</h2>
             <p>Heeft u een vraag, opmerking of iets anders?</p>
         </article>
-        <form action="">
-            <p>
-                <label for="name">Naam:</label>
-                <input id="name" type="text" placeholder="John Doe" size="60" maxlength="128" name="" required="">
-            </p>
-            <p>
-                <label for="email">Email:</label>
-                <input id="email" type="email" placeholder="johndoe@mail.com" size="60" name="" required="" >
-            </p>
-            <p>
-                <input id="man" value="man"name="geslacht" type="radio">
-                <label for="man">Man</label>
-
-                <input id="vrouw" value="vrouw" name="geslacht" type="radio">
-                <label for="vrouw">Vrouw</label>
-            </p>
-            <p>
-                <label for="context">Bericht: </label>
-                <br>
-                <textarea name="context" id="" cols="60" rows="10"></textarea>
-            </p>
-            <p>
-                <input type="submit" value="Verzend">
-            </p>
+        <form action="#">
+            <div class="left">
+                <p>
+                    <label for="name">Naam:</label>
+                    <input id="name" type="text" placeholder="John Doe" size="60" maxlength="128" name="naam" required="">
+                </p>
+                <p>
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" placeholder="johndoe@mail.com" size="60" name="email" required="" >
+                </p>
+                <p>
+                    <input id="man" value="man" name="geslacht" type="radio">
+                    <label for="man">Man</label>
+    
+                    <input id="vrouw" value="vrouw" name="geslacht" type="radio">
+                    <label for="vrouw">Vrouw</label>
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    <label for="context">Bericht: </label>
+                    <br>
+                    <textarea name="context" id="context" cols="60" rows="10"></textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Verzend">
+                </p>
+            </div>
         </form>
     </section>
 </body>
