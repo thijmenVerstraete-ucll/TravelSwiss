@@ -123,6 +123,7 @@ article.activity ul {
   list-style-type: none;
 }
 article.activity .activity_descr {
+  border-radius: 5px;
   margin: 0;
   grid-column: 2/5;
   box-sizing: border-box;
@@ -186,9 +187,82 @@ article.activity .activity_descr img {
   }
 }
 
+.tiptitle {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tiptitle h2 {
+  font-size: 40px;
+  margin-right: 20px;
+}
+.tiptitle .icon {
+  width: 80px;
+  height: 80px;
+}
+
+article.tipArt {
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+article.tipArt .tipdescr {
+  width: 45%;
+}
+article.tipArt .tipdescr ol {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+article.tipArt .tipdescr ol li {
+  margin: 15px 0;
+}
+article.tipArt .tipdescr a {
+  color: #f4f4f4;
+}
+article.tipArt .tipimg img {
+  width: 45%;
+}
+@media screen and (max-width: 1400px) and (min-width: 1000px) {
+  article.tipArt .tipdescr {
+    width: 55%;
+  }
+  article.tipArt .tipimg {
+    width: 40%;
+    height: 70%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 1000px) {
+  article.tipArt {
+    flex-direction: column;
+    height: auto;
+  }
+  article.tipArt .tipdescr {
+    width: 100%;
+  }
+  article.tipArt .tipimg {
+    width: 100%;
+  }
+}
+
 body {
+  background-color: #f4f4f4;
   font-family: sans-serif;
   padding: 0;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+img {
+  border-radius: 2px;
 }
 
 section {
@@ -228,7 +302,8 @@ article {
   width: 100%;
   font-size: 20px;
 }
-article.artDescription h2 {
+
+.artDescription h2 {
   font-size: 30px;
 }
 

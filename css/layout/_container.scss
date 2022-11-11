@@ -1,8 +1,17 @@
 @use '../sass-utils/variable' as v;
 
 body {
+    background-color: #f4f4f4;
     font-family: sans-serif;
     padding: 0;
+}
+
+p, a {
+    font-size: 20px;
+}
+
+img {
+    border-radius: 2px;
 }
 
 section {
@@ -47,10 +56,10 @@ section {
 article {
     width: 100%;
     font-size: 20px;
+}
 
-    &.artDescription {
-        h2 {
-            font-size: 30px;
-        }
+.artDescription {
+    h2 {
+        font-size: 30px;
     }
 }
