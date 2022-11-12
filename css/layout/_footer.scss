@@ -1,6 +1,59 @@
 @use '../sass-utils/variable' as v;
 
 footer {
-    width: 100%;
-    height: 300px;
+    section {
+        min-height: 0;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        article {
+            width: 300px;
+            h2 {
+                padding-bottom: 10px;
+                border-bottom: 2px solid v.$primTextcol;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        color: v.$primTextcol;
+                        text-decoration: none;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+
+            #bigIcon {
+                font-size: 150px;
+            }
+        }
+    }
+
+
+    &.lightfooter {
+        section {
+            background-color: v.$secondCol;
+            color: v.$secondTextCol;
+
+            article {
+                h2 {
+                    border-bottom: 2px solid v.$secondTextCol;
+                }
+
+                a {
+                    color: v.$secondTextCol;
+                }
+            }
+        }
+    }
 }

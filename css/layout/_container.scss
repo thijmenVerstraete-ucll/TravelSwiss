@@ -14,6 +14,12 @@ img {
     border-radius: 2px;
 }
 
+
+h2 {
+    font-size: 30px;
+}
+
+
 section {
     background-color: v.$primCol;
     color: v.$primTextcol;
@@ -55,11 +61,6 @@ section {
 
 article {
     width: 100%;
+    max-width: 1600px !important;
     font-size: 20px;
-}
-
-.artDescription {
-    h2 {
-        font-size: 30px;
-    }
 }
