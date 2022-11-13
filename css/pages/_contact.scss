@@ -2,17 +2,17 @@
 
 
 form {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .left, .right {
-        width: 50%;
+    input ,textarea {
+        width: 95%;
+        display: block;
     }
 
-    textarea {
-        max-width: 100%;
-        width: 100%;
+    input[type="radio"] {
+        width: auto;
+        display: inline;
+        
+        &#vrouw {
+            margin-left: 20px;
+        }
     }
 }

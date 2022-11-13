@@ -82,6 +82,7 @@ section article.gallery #g5 {
 }
 @media screen and (max-width: 800px) {
   section article.gallery {
+    height: auto;
     display: flex;
     flex-direction: column;
   }
@@ -90,18 +91,16 @@ section article.gallery #g5 {
   }
 }
 
-form {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+form input, form textarea {
+  width: 95%;
+  display: block;
 }
-form .left, form .right {
-  width: 50%;
+form input[type=radio] {
+  width: auto;
+  display: inline;
 }
-form textarea {
-  max-width: 100%;
-  width: 100%;
+form input[type=radio]#vrouw {
+  margin-left: 20px;
 }
 
 article.activity {
@@ -145,7 +144,6 @@ article.activity .activity_descr .descr_items {
   justify-content: space-around;
 }
 article.activity .activity_descr .descr_items h3 {
-  font-size: 30px;
   margin: 0;
 }
 article.activity .activity_descr img {
@@ -253,20 +251,11 @@ article.tipArt .tipimg img {
 
 body {
   background-color: #f4f4f4;
-  font-family: sans-serif;
   padding: 0;
-}
-
-p, a {
-  font-size: 20px;
 }
 
 img {
   border-radius: 2px;
-}
-
-h2 {
-  font-size: 30px;
 }
 
 section {
@@ -291,6 +280,9 @@ section:nth-of-type(even) .activity .activity_descr {
   background-color: #1e355a;
   color: #f4f4f4;
 }
+section:nth-of-type(even) .activity .activity_descr a {
+  color: rgb(214, 101, 243);
+}
 @media screen and (max-width: 1500px) and (min-width: 740px) {
   section {
     padding: 20px 100px;
@@ -304,7 +296,7 @@ section:nth-of-type(even) .activity .activity_descr {
 
 article {
   width: 100%;
-  max-width: 1600px !important;
+  max-width: 1600px;
   font-size: 20px;
 }
 
@@ -416,4 +408,16 @@ header nav ul li a:hover {
     background: #f4f4f4;
     color: #000;
   }
+}
+
+body {
+  font-family: sans-serif;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+h2, h3 {
+  font-size: 30px;
 }/*# sourceMappingURL=stijl.css.map */
